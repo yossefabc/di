@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+#container{
+    display: grid;
+    border: 1px solid;
+    height: 700px;
+    grid-template-areas:"header header header"
+    "hero main  main"
+    "sidebar main main"
+    "sidebar extra  extra "
+    " images  images  posts"
+    "footer footer footer";
+
+}
+#child1{
+    background-color: blue;
+    grid-area:header;
+
+}
+#child2{
+    background-color: purple;
+    grid-area:hero ;
+}
+#child3{
+    background-color: green;
+    grid-area: sidebar;
+}
+#child4{
+    background-color: lightgreen;
+    grid-area: images;
+}
+#child5{
+    background-color: orange;
+    grid-area:footer;
+}
+#child6{
+    background-color: brown;
+    grid-area: main;
+}
+#child7{
+    background-color: gray;
+    grid-area: extra;
+}
+#child8{
+    background-color: pink;
+    grid-area:posts;
+}

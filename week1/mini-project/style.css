@@ -1,0 +1,25 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+nav{
+    background-color: black;
+    height: 40px;
+    padding: 10px;
+    margin: 20px;
+   
+}
+#icon{
+    position: relative;
+    top: 10px;
+}
+#products{
+    position: relative;
+    text-align: right;
+    bottom: 10px;
+    
+}
+footer{
+    text-align: center;
+}
