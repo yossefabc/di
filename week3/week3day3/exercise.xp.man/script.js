@@ -42,3 +42,35 @@ console.log(people.slice(1,3));
 let fo="foo"
 console.log(fo.indexOf("foo"));
 
+// 7.
+let last=people.length
+console.log(last)
+
+//Part II - Loops
+//1.
+let People=["Greg", "Mary", "Devon", "James"];
+console.log(People);
+
+for(i=0;i<people.length;i++){
+   console.log(People[i]);
+}
+
+//2.
+
+for(i=0;i<People.length;i++){
+  if(i===3){
+   break;
+  }
+  console.log(People[i])
+}
+
+
+// 🌟 Exercise 2 : Your Favorite Colors
+
+//1.
+let colors=["red","black","white","blue","yellow"];
+//2.
+do{
+   console.log("colors"+i)
+}
+while(i<colors.length)
