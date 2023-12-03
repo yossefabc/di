@@ -65,12 +65,3 @@ for(i=0;i<People.length;i++){
 }
 
 
-// 🌟 Exercise 2 : Your Favorite Colors
-
-//1.
-let colors=["red","black","white","blue","yellow"];
-//2.
-do{
-   console.log("colors"+i)
-}
-while(i<colors.length)
