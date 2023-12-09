@@ -28,22 +28,24 @@ function calculateTip(){
 }
 //3.
 function calculateTip(){
-    prompt("john what the amount of the bill");
+    
     for(let i=0; i>0; i++){
         if(i>$50){
-            prompt("tip 20%");
+            const num1=     prompt("tip 20%");
+        console.log(num1);
         }else if($50<i<$200){
-            prompt("tip 15%");
+          const num2=  prompt("tip 15%");
         }else if(i>$200){
-            prompt("tip 10%");
-        }
-    console.log(i);
+       const num3=     prompt("tip 10%");
+        
+    
     }
 
     
     
 }  
-// calculateTip(); 
+}
+calculateTip(); 
 
 
 
@@ -53,24 +55,24 @@ function calculateTip(){
 function  isDivisible(){}
 //2.3.4
 function  isDivisible(){
-    
+    let sum = ""
     for(let i=0;i <= 500  ;i++){
      if(i % 23 ===0){
         console.log(i);
       
-        
       
      } 
         
      
-     
+   
       
 }
 }
   isDivisible()
 
+    
  
-
+   
 
 //   Exercise 4 : Shopping List
 //1.
@@ -102,4 +104,11 @@ function myBill(){
        console.log(prices.banana+prices.apple+prices.orange);
    
 }
-myBill()
+
+myBill();
+
+// Exercise 5 : What’s In My Wallet ?
+//1.
+
+changeEnough(itemPrice, amountOfChange)
+    
