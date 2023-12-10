@@ -30,11 +30,11 @@ playTheGame();
         break;
     }else if(userNumber>computerNumber){
        alert("your number is bigger then the computer's,guess again");
-     prompet("use new number");
+     userNumber=prompet("use new number");
        
     }else if(userNumber<computerNumber){
         alert("your number is smaller then the computer's,guess again");
-      prompt("use new number");
+      userNumber=prompt("use new number");
         
     }else{
         alert("out of chances")
