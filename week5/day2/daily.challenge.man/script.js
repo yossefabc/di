@@ -1,21 +1,39 @@
 // Daily Challenge: Tell The Story
 
 //1.
-document.getElementById("lib-button").addEventListener("click",function(event){
-event.preventDefault()
-console.log(document.getElementById("noun").value);
-console.log(document.getElementById("adjective").value);
-console.log(document.getElementById("person").value);
-console.log(document.getElementById("verb").value);
-console.log(document.getElementById("place").value);
+const button = clickbutton()
+button.addEventListener("click",getclick)
 
-});
 
-//2.
 
-let x = document.getElementById("lib-button");
-if (x.length===0){
-    console.log("empty");
-}else{
-    console.log("not empty");
+function getclick(e){
+e.preventDefault()
+ 
+  const noun = document.getElementById("noun").value; 
+ const adjective = document.getElementById("adjective").value;
+ const person = document.getElementById("person").value;
+ const verb = document.getElementById("verb").value;
+ const place= document.getElementById("place").value;
+console.log(noun,adjective,person,verb,place);
+if(noun == ""|| adjective == "" || person == "" || verb == ""|| place == "" );
+return;
+ const Story = writestory(noun,adjective,person,verb,place) 
+
 }
+function story(noun,adjective,persone,verb,place){
+return `i like to look at $(noun), i think that they are $(adjective). my favorite person is
+$(person). we often $(verb) together when we are in $(place)`
+}
+
+
+function clickbutton(){
+  return document.getElementById("lib-button")
+}
+
+
+
+
+
+
+
+   
