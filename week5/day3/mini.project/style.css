@@ -1,3 +1,7 @@
+
+
+
+
 .grid-container{
     
     display: grid;
@@ -7,19 +11,32 @@
     width:20vw;
     height:50vh;
     padding: 10px;
+    
 }
+
+.second{
+    display: table-row-group ;
+    grid-template-columns: 1fr ;
+   
+ 
+ 
+}
+
 
 .grid-item{
     border: 1px solid black;
   
     margin: 5px;
+   
 }
 .head{
-    display: flex;
-    flex-direction: column;
+   
+   display: grid;
+   grid-template-columns: auto;
+    
     
     width:70vw;
-    height:57vh;
+    height:67vh;
     background-color: gray;
 }
 
@@ -27,15 +44,8 @@
     padding-left: 120px;
   
 }
-.box{
-    border: 1 px solid white;
-    background-color:white;
+
+
     
-}
-.container{
-    display: flex;
-    flex-direction: row;
-    
-}
 
    
