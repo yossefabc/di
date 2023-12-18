@@ -1,22 +1,24 @@
 // Daily Challenge: Planets
 
+
+
 //1.
- const array=["planet","moon"];
-//2. 
-const newdiv= document.createElement("div");
-const newcontent = document.createTextNode(".planet ");
-newdiv.appendChild(newcontent);
-const currentdiv= document.getElementById("div");
-document.body.insertBefore(newdiv,currentdiv);
-const x = document.querySelector("div");
-x.style.backgroundColor= "red";
+const planets = ["mars","sun"];
+console.log(planets)
+//2.
+const div1 = document.createElement("div");
+div1.classList.add("planet");
+console.log(div1)
+const div2 = document.createElement("div");
+div2.classList.add("planet")
+console.log(div2)
+//3.
 
-//3.4
-const newdiv2= document.createElement("div");
-const newcontent2 = document.createTextNode("moon ");
-newdiv2.appendChild(newcontent2);
+div1.style.backgroundColor= "red";
+div2.style.backgroundColor= "blue";
+//4.
+const section = document.querySelector("section");
+console.log(section);
 
-const currentdiv2= document.getElementById("div");
-document.body.insertBefore(newdiv2,newdiv);
-const y = document.querySelector("div");
-y.style.backgroundColor= "blue";
+section.appendChild(div1);
+section.appendChild(div2);
