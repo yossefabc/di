@@ -43,13 +43,51 @@
 // }
 
 // Exercise 2 : Move The Box
-const container = document.getElementById("container");
-const animate = document.getElementById("animate");
-const button = document.getElementById("button");
-console.log(button);
+// const container = document.getElementById("container");
+// const animate = document.getElementById("animate");
+// const button = document.getElementById("button");
+// console.log(button);
 
-button.addEventListener("click",mymove)
-function mymove(){
-    animate+= 1;
-    animate.style.right= right + "px";
-}
+
+// let pos = 0;
+// let intervalId = setInterval(function () {
+//   if (pos == 350) {
+//     clearInterval(intervalId);
+   
+//   }
+//   pos++;
+//   animate.style.left = `${pos}px`;
+  
+// }, 1);
+
+
+// Exercise 3: Drag & Drop
+
+
+const target = document.getElementById("target");
+const box = document.getElementById("box");
+
+box.addEventListener("dragstart", function (event) {
+    event.dataTransfer.setData("text/plain", event.target.id);
+  });
+
+  target.addEventListener("dragover", allowDrop);
+
+  
+target.addEventListener("drop", function (event) {
+    drop(event, target);
+  });
+
+  function allowDrop(event) {
+    event.preventDefault();
+  }
+  
+  function drop(event, destination) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text/plain");
+    const draggedElement = document.getElementById(data);
+
+    if (destination.classList.contains("container")) {
+        destination.appendChild(draggedElement);
+      }
+    }
