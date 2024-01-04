@@ -52,9 +52,17 @@
 
 
 --5.
--- CREATE TABLE library(
---  FOREIGN KEY (book_fk_id) REFERENCES book(book_fk_id) ON UPDATE CASCADE,
---   FOREIGN KEY (student_fk_id) REFERENCES student(student_fk_id) ON UPDATE CASCADE,
--- borrowed_date INTEGER NOT NULL	
--- )
+-- CREATE TABLE library (
+--   student_id INTEGER NOT NULL,
+--   book_id INTEGER NOT NULL,
+--   borrowed_date INTEGER NOT NULL ,
+--   PRIMARY KEY (student_id, book_id),
+--   FOREIGN KEY (student_id) REFERENCES student(student_id) ON UPDATE CASCADE,
+--   FOREIGN KEY (book_id) REFERENCES book(book_id) ON UPDATE CASCADE
+-- );
+
+--6.
+-- INSERT into library(student_id, book_id) VALUES 
+-- ((SELECT student_id FROM student WHERE name = 'john'), 
+--  (SELECT book_id FROM book WHERE title_name='Alice In Wonderland' ))
 
