@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project - Random Quote Generator</title>
+</head>
+<body>
+  <section  id="quote-container" style="border: 1px solid black; width: 500px; height: 500px;">
+    
+   
+    <p id="para"></p>
+   
+   
+    
+  </section>
+  <!-- <button onclick="countCharactersWithSpaces()">Count Characters (with spaces)</button>
+    <button onclick="countCharactersWithoutSpaces()">Count Characters (without spaces)</button>
+    <button onclick="countWords()">Count Words</button>
+    <button onclick="likeQuote()">Like</button> -->
+  <button id="btn" type="button" style="color: red;">Generate Quote</button>
+      <form id="Quote-form">
+        
+        <label for="Quote">Quote:</label>
+       <input id="quoteInput" type="text" name="Quote">
+       
+       <label for="author">author:</label>
+       <input id="authorInput" type="text" name="author"> 
+       
+       <button type="button" onclick="addNewQuote()">ADD QUATE</button>
+
+      </form>
+
+      <form id="filter-form">
+        <label for="authorFilter">Author:</label>
+        <input type="text" id="authorFilter" name="authorFilter" required>
+        
+        <button type="button" onclick="filterQuotes()">Filter Quotes</button>
+    </form>
+
+    <button onclick="previousQuote()">Previous</button>
+    <button onclick="nextQuote()">Next</button>
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>
