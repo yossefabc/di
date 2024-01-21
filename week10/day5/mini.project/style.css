@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+#container{
+    background-color: brown;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.cardstyle{
+    margin: 10px;
+    
+    color: aqua;
+    border: 1px solid black;
+    width: 350px;
+    text-align: center;
+}
+
+img{
+    border: 1px solid red;
+    border-radius: 200px;
+    background-color: chartreuse;
+}
+
+#head{
+    background-color: aquamarine;
+    display: flex;
+    
+}
