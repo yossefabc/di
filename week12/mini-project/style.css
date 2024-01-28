@@ -1,0 +1,18 @@
+body{
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/image_8036a7c0.jpeg");
+    text-align: center;
+}
+
+#character-info{
+    display: inline-block;
+    border: 2px solid red;
+    width: 400px;
+    height: 250px;
+}
+
+p{
+    color: blue;
+}
+#button{
+color: blueviolet;
+}
