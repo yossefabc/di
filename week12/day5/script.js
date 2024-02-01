@@ -1,4 +1,7 @@
+const greeting= required("./greeting.js")
 
+
+module.exports= greeting;
 
 
  
