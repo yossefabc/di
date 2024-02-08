@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game-container {
+    margin-top: 50px;
+}
+
+#emoji-container {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
