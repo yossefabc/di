@@ -1,33 +1,37 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Component from './components/Component';
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    checkbox1: false,
+    checkbox2: false,
+  });
 
+ 
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new URLSearchParams(formData);
+    window.location.href = `http://localhost:3000/?${params.toString()}`;
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+       <div>
+      <h1>Form Data</h1>
+      <Component formData={formData} handleChange={handleChange}  handleSubmit={handleSubmit}/>
+     
+    </div>
     </>
   )
 }
