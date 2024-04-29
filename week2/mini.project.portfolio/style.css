@@ -12,3 +12,85 @@
     display: flex;
     flex-direction:row;
 }
+
+#about{
+    margin-top: 150px;
+    background-color: beige;
+    
+}
+
+#about h1{
+    text-align: center;
+}
+
+#about h4{
+    text-align: center;
+}
+
+#about h2{
+    margin-top: 50px;
+}
+
+#about h3{
+    margin-top: 30px;
+}
+
+.con{
+    font-size: x-large;
+    color: black;
+    background-color: red;
+}
+
+.skills{
+    margin-top: 50px;
+}
+
+.skills h1{
+    text-align: left;
+}
+
+.skills ul{
+    display: flex;
+   
+    list-style: none;
+}
+
+.skills li{
+    padding: 10px;
+}
+
+
+
+
+
+#projects h3{
+    text-align: center;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.contact{
+    color: white;
+}
+
+.social{
+    color: white;
+}
+
+.gymtrack h3{
+    text-align: left;
+}
+
+.gymtrack h4{
+    text-align: left;
+}
+
+.pro{
+    background-color: bisque;
+}

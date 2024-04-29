@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Route, Link,Routes } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+const Home = () => (
+  <div>
+    <h1>HomePage</h1>
+    <img
+      src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg"
+      alt="Homepage"
+      width="40%" />
+  </div>
+);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+const About = () => (
+  <div>
+    <h1>About me : My Hobbies</h1>
+    <img
+      src="https://cdn.pixabay.com/photo/2017/06/16/18/03/classical-2409809_1280.png"
+      alt="About"
+      width="40%" />
+    <p>I love playing the guitar!</p>
+  </div>
+);
 
-export default App
+const MyProjects = () => (
+  <div>
+    <h1>Here is a list of projects</h1>
+    <img
+      src=" https://cdn.pixabay.com/photo/2017/06/10/07/18/list-2389219_1280.png"
+      alt="About"
+      width="30%" />
+  </div>
+);
+
+const App = () => (
+  <div>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About Me</Link>
+      </li>
+      <li>
+        <Link to="/projects">My Projects</Link>
+      </li>
+    </ul>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects" element={<MyProjects />} />
+    </Routes>
+  </div>
+);
+
+export default App;
