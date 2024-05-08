@@ -1,10 +1,17 @@
-import { useState } from 'react'
-import TodoForm  from './components/TodoForm';
+import { useState, useEffect } from 'react';
+import TodoForm from './components/TodoForm';
 import TodoItem from './components/TodoItem';
-import './App.css'
+import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  // Retrieve todos from localStorage or initialize as an empty array
+  const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
+  const [todos, setTodos] = useState(initialTodos);
+
+  // Save todos to localStorage whenever todos state changes
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (text) => {
     const newTodos = [...todos, { text }];
